@@ -1,0 +1,42 @@
+{
+  "env": {
+    "es": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "browsers": [
+                "last 2 Chrome versions", 
+                "safari >=11",
+                "ie >= 11"
+              ]
+            },
+            "loose": false,
+            "modules": false,
+            "useBuiltIns": false
+          }
+        ]
+      ]
+    },
+    "umd": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "browsers": [
+                "last 2 Chrome versions", 
+                "safari >=11",
+                "ie >= 11"
+              ]
+            },
+            "loose": false,
+            "modules": false,
+            "useBuiltIns": false
+          }
+        ]
+      ]
+    }
+  }
+}

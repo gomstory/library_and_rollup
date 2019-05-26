@@ -1,0 +1,30 @@
+{
+  "name": "gom.js",
+  "version": "1.0.0",
+  "description": "A sample library build by rollup",
+  "main": "dist/index.js",
+  "module": "dist/index.es6.js",
+  "scripts": {
+    "clean": "rimraf dist && rimraf es6",
+    "build": "run-s clean && run-p build:es build:umd build:module",
+    "build:es": "NODE_ENV=es rollup -c",
+    "build:umd": "NODE_ENV=umd rollup -c",
+    "build:module": "NODE_ENV=es babel src -d es"
+  },
+  "author": "arkom.madaehoh@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "lodash": "^4.17.11",
+    "npm-run-all": "^4.1.2",
+    "rollup": "^1.12.3",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-filesize": "^6.1.0",
+    "rollup-plugin-node-resolve": "^5.0.0"
+  },
+  "dependencies": {}
+}
